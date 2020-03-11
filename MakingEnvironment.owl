@@ -1,0 +1,2738 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost/enviornment.owl#"
+     xml:base="http://localhost/enviornment.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:env="http://localhost/enviornment.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="http://purl.org/linked-data/api/vocab#"
+     xmlns:ogc-na="http://www.opengis.net/def/metamodel/ogc-na/">
+    <owl:Ontology rdf:about="http://localhost/enviornment.owl">
+        <owl:versionIRI rdf:resource="http://localhost/1.0/enviornment.owl"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:comment>Enviornment ontology  for Sri Lanka</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/linked-data/api/vocab#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/linked-data/api/vocab#definition"/>
+    
+
+
+    <!-- http://purl.org/linked-data/api/vocab#extendedMetadataVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/linked-data/api/vocab#extendedMetadataVersion"/>
+    
+
+
+    <!-- http://www.opengis.net/def/metamodel/ogc-na/collectionView -->
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/def/metamodel/ogc-na/collectionView"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#member -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#member"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/isPrimaryTopicOf -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/enviornment.owl#IsHostedBy -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#IsHostedBy">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Resource"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#IsQualityMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#IsQualityMeasuredBy">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#SensingResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#IsTestedOn -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#IsTestedOn">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#LaboratoryResource"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#LabTestOutputObservations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasBeginTimeSlot -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasBeginTimeSlot">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeInterval"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#TimeInstant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasCompensateTimePeriod -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasCompensateTimePeriod">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#CompensateMeasurnment"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasEndTimeSlot -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasEndTimeSlot">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeInterval"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#TimeInstant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasEventOcuuringPeriod -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasEventOcuuringPeriod">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Event"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasFeaturOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasFeaturOfInterest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Observations"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasObservedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasObservedProperty">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Observations"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#ObservedProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasObservedUnitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasObservedUnitOfMeasure">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Observations"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasPosition">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeInstant"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Timeposition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasReferenceUnit -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasReferenceUnit">
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasSpatialFeatureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasSpatialFeatureOfInterest">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/enviornment.owl#hasFeaturOfInterest"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#SpatialFeatureofInterest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasSpatialValueProperty -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasSpatialValueProperty">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#SpatialObservation"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#ObservedProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasSpatialValueTimePeriod -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasSpatialValueTimePeriod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#SpatialObservation"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasSpatialValueUnitOFMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasSpatialValueUnitOFMeasure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#SpatialObservation"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasSptialObservedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasSptialObservedProperty">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#SpatialResource"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#ObservedProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasTemporalUnit_Type -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasTemporalUnit_Type">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeDuration"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#TemporalUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasTimeofObserved -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasTimeofObserved">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Observations"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasUnitofMeasureForSpatialValue -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#hasUnitofMeasureForSpatialValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#has_duration -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#has_duration">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeInterval"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#TimeDuration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#isCompensatedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#isCompensatedFrom">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Event"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#CompensateMeasurnment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#isCoverdOn -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#isCoverdOn">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Event"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#SpatialFeatureofInterest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#isManagedBy -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#isManagedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Platform"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#isPlacedOfObservedAt -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#isPlacedOfObservedAt">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Observations"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#isProducedBy">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Observations"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#SensingResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#isSpatialyQualityMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/enviornment.owl#isSpatialyQualityMeasuredBy">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#SpatialResource"/>
+        <rdfs:range rdf:resource="http://localhost/enviornment.owl#SpatialQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/enviornment.owl#Date-Time -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#Date-Time">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeInstant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Date-Time-Stamp -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#Date-Time-Stamp">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeInstant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Name_of_temporal_position -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#Name_of_temporal_position">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Timeposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Numeric_value_of_temporal_duration -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#Numeric_value_of_temporal_duration">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#TimeDuration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Numeric_value_of_temporal_position -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#Numeric_value_of_temporal_position">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Timeposition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SpatialValue -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#SpatialValue">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#SpatialObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#abbreviations -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#abbreviations">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#conversion_multiplier -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#conversion_multiplier">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#conversion_offset -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#conversion_offset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasInstance -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasInstance">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Time"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasInterval -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasInterval">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Time"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasMinistryBelogTo -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasMinistryBelogTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasOrganizationAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasOrganizationAddress">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasOrganizationCode -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasOrganizationCode">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasOrganizationName -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasOrganizationName"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasStationCode -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasStationCode"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasTolarance -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasTolarance">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#XYTollarance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasWebURL -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasWebURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#hasXYResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#hasXYResolution">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#XYResolution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#observedvalue -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#observedvalue">
+        <rdfs:domain rdf:resource="http://localhost/enviornment.owl#Observations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/enviornment.owl#symbol -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/enviornment.owl#symbol">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/enviornment.owl#Accuracy -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Accuracy">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AcidityObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AcidityObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SoilObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AirPollutantCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AirPollutantCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#CompensateMeasurnment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AirPollutantIndex -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AirPollutantIndex">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AirPollutantObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AirPollutantObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SamplingObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AngleUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AngleUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AreaUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AreaUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ArsenicCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ArsenicCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ArsenicConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ArsenicConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AtmosphericPressureCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AtmosphericPressureCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AtmosphericPressureObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AtmosphericPressureObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#AtmosphericPressureStates -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#AtmosphericPressureStates">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#BariumCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#BariumCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#BariumConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#BariumConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#CalciumCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#CalciumCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#CalciumConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#CalciumConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#CarbonMonoxideCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#CarbonMonoxideCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#CarbonMonoxideConcentration -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#CarbonMonoxideConcentration">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ChlorateCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ChlorateCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ChlorateConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ChlorateConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#CompensateMeasurnment -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#CompensateMeasurnment"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Condition -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Condition">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ConductivityCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ConductivityCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ConductivityObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ConductivityObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SoilObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#CyanideCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#CyanideCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#CyanideConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#CyanideConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Detection_limit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Detection_limit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#DewPointCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#DewPointCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#DewPointObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#DewPointObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#DimensionlessUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#DimensionlessUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#DistanceUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#DistanceUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Drift -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Drift">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Drought -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Drought">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#HazardousEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Event -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Event"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#FeatureOfInterest -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Fire -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Fire">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#HazardousEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#FluorideCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#FluorideCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#FluorideConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#FluorideConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Frequency -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Frequency">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#GeologicalObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#GeologicalObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Observations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#GranularityObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#GranularityObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SoilObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#HazardousEvent -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#HazardousEvent">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Event"/>
+        <owl:disjointWith rdf:resource="http://localhost/enviornment.owl#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#HumidityCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#HumidityCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#HumidityObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#HumidityObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalObservations"/>
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SoilObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#HumidityStates -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#HumidityStates">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#IronCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#IronCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#IronConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#IronConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#LabTestOutputObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#LabTestOutputObservations"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#LaboratoryResource -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#LaboratoryResource">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#NonSensingResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#LandSlide -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#LandSlide">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#HazardousEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Latency -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Latency">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#LeadConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#LeadConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Lead_Concentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Lead_Concentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Location -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Location"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#MagnesiumCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#MagnesiumCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#MagnesiumConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#MagnesiumConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Maintenance_Schedule -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Maintenance_Schedule">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#OperationQuality"/>
+        <owl:disjointWith rdf:resource="http://localhost/enviornment.owl#Operating_Power_Range"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Measurement__Range -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Measurement__Range">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#MeasurnmentQuality -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#MeteorologicalCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#MeteorologicalCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#CompensateMeasurnment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#MeteorologicalObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#MeteorologicalObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Observations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#MonoxideConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#MonoxideConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantSensorObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NaturalEvent -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NaturalEvent">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NitrateCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NitrateCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NitrateConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NitrateConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NitriteCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NitriteCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NitriteConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NitriteConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NitrogenDioxideCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NitrogenDioxideCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NitrogenDioxideConcentration -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NitrogenDioxideConcentration">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#NonSensingResource -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#NonSensingResource">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Observations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Observations"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ObservedProperty -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ObservedProperty"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Operating_Power_Range -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Operating_Power_Range">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#OperationQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#OperationQuality -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#OperationQuality">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Organization -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Organization"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#OzoneCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#OzoneCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#OzoneConcentration -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#OzoneConcentration">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ParticularMassCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ParticularMassCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#ParticularMassConcentration -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#ParticularMassConcentration">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#PhospateCCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#PhospateCCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#PhospateConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#PhospateConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Platform -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Platform"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#PowerUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#PowerUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#PrecipitationIntensityCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#PrecipitationIntensityCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#PrecipitationIntensityObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#PrecipitationIntensityObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#PrecipitationStates -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#PrecipitationStates">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Precision -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Precision">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#RadianceUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#RadianceUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Resolution -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Resolution">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Resource -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Resource"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Response_time -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Response_time">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Sampler -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Sampler">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SensingResource"/>
+        <owl:disjointWith rdf:resource="http://localhost/enviornment.owl#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SamplingObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SamplingObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Observations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SaturationObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SaturationObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SoilObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Selectivity -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Selectivity">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SensingResource -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SensingResource">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Sensitivity -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Sensitivity">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeasurnmentQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Sensor -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Sensor">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SensingResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SoilObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SoilObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Observations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SoilWaterPotentialObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SoilWaterPotentialObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SoilObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SpatialFeatureofInterest -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SpatialFeatureofInterest">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SpatialObservation -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SpatialObservation">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SpatialFeatureofInterest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SpatialQuality -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SpatialQuality"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SpatialResource -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SpatialResource">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Storm -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Storm">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#HazardousEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#StressOrPressureUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#StressOrPressureUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SulfurDioxideCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SulfurDioxideCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SulfurDioxideConcentration -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SulfurDioxideConcentration">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#AirPollutantObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#SulphateConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#SulphateConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantLabTestObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TemperatureCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TemperatureCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TemperatureObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TemperatureObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TemperatureStates -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TemperatureStates">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TemperatureUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TemperatureUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TemporalUnit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TemporalUnit">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Time -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Time"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TimeDuration -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TimeDuration">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TimeInstant -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TimeInstant">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TimeInterval -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TimeInterval">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Timeposition -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Timeposition">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#TurbidityCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#TurbidityCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Unit -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#Unit"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterLevelCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterLevelCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterLevelObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterLevelObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantSensorObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterPollutantCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterPollutantCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#CompensateMeasurnment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterPollutantIndex -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterPollutantIndex">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterPollutantLabTestObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterPollutantLabTestObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#LabTestOutputObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterPollutantSensorObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterPollutantSensorObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#Observations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterTemperatureCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterTemperatureCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WaterTemperatureObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WaterTemperatureObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantSensorObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WindSpeedCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WindSpeedCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WindSpeedStates -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WindSpeedStates">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#WindspeedObservations -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#WindspeedObservations">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#MeteorologicalObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#XYResolution -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#XYResolution">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SpatialQuality"/>
+        <owl:disjointWith rdf:resource="http://localhost/enviornment.owl#XYTollarance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#XYTollarance -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#XYTollarance">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#SpatialQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#pHLevelCompensate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#pHLevelCompensate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantCompensate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/enviornment.owl#pHLevelConcentrate -->
+
+    <owl:Class rdf:about="http://localhost/enviornment.owl#pHLevelConcentrate">
+        <rdfs:subClassOf rdf:resource="http://localhost/enviornment.owl#WaterPollutantSensorObservations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linked-data/api/vocab#ItemEndpoint -->
+
+    <owl:Class rdf:about="http://purl.org/linked-data/api/vocab#ItemEndpoint"/>
+    
+
+
+    <!-- http://purl.org/linked-data/api/vocab#Page -->
+
+    <owl:Class rdf:about="http://purl.org/linked-data/api/vocab#Page"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://defs.opengis.net/elda-common/ogc-def/resource.rdf?uri=http://www.opengis.net/def/function/geosparql/ -->
+
+    <owl:NamedIndividual rdf:about="http://defs.opengis.net/elda-common/ogc-def/resource.rdf?uri=http://www.opengis.net/def/function/geosparql/">
+        <rdf:type rdf:resource="http://purl.org/linked-data/api/vocab#ItemEndpoint"/>
+        <rdf:type rdf:resource="http://purl.org/linked-data/api/vocab#Page"/>
+        <vocab:definition rdf:resource="http://defs.opengis.net/elda-common/ogc-def/resource.rdf?uri=http://www.opengis.net/def/function/geosparql/"/>
+        <vocab:extendedMetadataVersion rdf:resource="http://defs.opengis.net/elda-common/ogc-def/resource.rdf?_metadata=all&amp;uri=http://www.opengis.net/def/function/geosparql/"/>
+        <foaf:primaryTopic rdf:resource="http://www.opengis.net/def/function/geosparql/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Air -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Air">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Atmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Atmosphere">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Bar -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Bar">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#StressOrPressureUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Pascal"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bar</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100000.0</conversion_multiplier>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bar</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Canopy -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Canopy">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Centimetre -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Centimetre">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#DistanceUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Meter"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^-2</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cm</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Day_Time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Day_Time">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Degree_Angle -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Degree_Angle">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AngleUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Radian"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deg</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0174532925</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">°</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Degree_Celcius -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Degree_Celcius">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#TemperatureUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Kelvin"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degC</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Degree_Fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Degree_Fahrenheit">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#TemperatureUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degF</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Foot -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Foot">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#DistanceUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Meter"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3048</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Forest -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Forest">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Ground -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Ground">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Ground_level_soil -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Ground_level_soil">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Hectare -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Hectare">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AreaUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Square_metre"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10000.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Hour_Time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Hour_Time">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Humidity -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Humidity">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Kelvin">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#TemperatureUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kelvin</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Kilometer -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Kilometer">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#DistanceUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Meter"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">km</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">km</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Kilopascal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Kilopascal">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#StressOrPressureUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPa</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPa</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Kilowatt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Kilowatt">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#PowerUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Watt"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kW</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kW</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Kilowatt_per_Square_Meter -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Kilowatt_per_Square_Meter">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#RadianceUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kW/m^2</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</conversion_multiplier>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kW/m^2</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Knot -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Knot">
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kn</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5144444444444445</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kn</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Land -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Land">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Meter -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Meter">
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Meter_per_Second -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Meter_per_Second">
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m/s</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m s^-1</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Millimeter -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Millimeter">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#DistanceUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Meter"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^-3</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Minute_Angle -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Minute_Angle">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AngleUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Radian"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mina</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.908882E-4</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mina</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Minute_Time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Minute_Time">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Month_Time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Month_Time">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Pascal -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Pascal">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#StressOrPressureUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Percent -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Percent">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#DimensionlessUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Ph -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Ph">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#DimensionlessUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pH</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pH</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Radian -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Radian">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AngleUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rad</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rad</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Rainfall -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Rainfall">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#River_surface -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#River_surface">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Sea_level_air -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Sea_level_air">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Second_Angle -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Second_Angle">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AngleUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Radian"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seca</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.848137E-6</conversion_multiplier>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seca</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Second_Time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Second_Time">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Soil -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Soil">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Soil_pores -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Soil_pores">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Square_metre -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Square_metre">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AreaUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m^2</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</conversion_multiplier>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m2</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Steradian -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Steradian">
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sr</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sr</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Vegetation -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Vegetation">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Water -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Water">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Watt -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Watt">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#PowerUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Watt_per_Square_Meter -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Watt_per_Square_Meter">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#RadianceUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W/m^2</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W/m^2</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Watt_per_steradian -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Watt_per_steradian">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#RadianceUnit"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W/sr</abbreviations>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W/sr</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Week_Time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Week_Time"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Wind -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Wind">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#Year_Time -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#Year_Time"/>
+    
+
+
+    <!-- http://localhost/enviornment.owl#acre -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#acre">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AreaUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Square_metre"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acre</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4046.873</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acre</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#soil_moisture -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#soil_moisture">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#FeatureOfInterest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#square_foot -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#square_foot">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AreaUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Square_metre"/>
+        <abbreviations rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft2</abbreviations>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.09290304</conversion_multiplier>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft2</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/enviornment.owl#square_kilometre -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/enviornment.owl#square_kilometre">
+        <rdf:type rdf:resource="http://localhost/enviornment.owl#AreaUnit"/>
+        <hasReferenceUnit rdf:resource="http://localhost/enviornment.owl#Square_metre"/>
+        <conversion_multiplier rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</conversion_multiplier>
+        <conversion_offset rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</conversion_offset>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">km2</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <dc:source rdf:resource="http://www.opengis.net/doc/geosparql/1.0"/>
+        <rdfs:label>GeoSPARQL Functions	</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.opengis.net/doc/geosparql/1.0"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/boundary"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/buffer"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/convexHull"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/difference"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/distance"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehContains"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehCoveredBy"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehCovers"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehDisjoint"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehEquals"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehInside"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehMeet"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/ehOverlap"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/envelope"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/getSRID"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/intersection"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8dc"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8ec"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8eq"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8ntpp"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8ntppi"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8po"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8tpp"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/rcc8tppi"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/relate"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfContains"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfCrosses"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfDisjoint"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfEquals"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfIntersects"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfOverlaps"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfTouches"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/sfWithin"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/symDifference"/>
+        <skos:member rdf:resource="http://www.opengis.net/def/function/geosparql/union"/>
+        <skos:prefLabel>GeoSPARQL Functions	</skos:prefLabel>
+        <foaf:isPrimaryTopicOf rdf:resource="http://defs.opengis.net/elda-common/ogc-def/resource.rdf?uri=http://www.opengis.net/def/function/geosparql/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/boundary -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/boundary">
+        <rdfs:label xml:lang="en">boundary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/buffer -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/buffer">
+        <rdfs:label xml:lang="en">buffer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/convexHull -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/convexHull">
+        <rdfs:label xml:lang="en">convex hull</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/difference -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/difference">
+        <rdfs:label xml:lang="en">difference</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/distance -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/distance">
+        <rdfs:label xml:lang="en">distance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehContains -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehContains">
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehCoveredBy -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehCoveredBy">
+        <rdfs:label xml:lang="en">covered by</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehCovers -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehCovers">
+        <rdfs:label xml:lang="en">covers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehDisjoint -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehDisjoint">
+        <rdfs:label xml:lang="en">disjoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehEquals -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehEquals">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehInside -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehInside">
+        <rdfs:label xml:lang="en">inside</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehMeet -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehMeet">
+        <rdfs:label xml:lang="en">meet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/ehOverlap -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/ehOverlap">
+        <rdfs:label xml:lang="en">overlap</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/envelope -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/envelope">
+        <rdfs:label xml:lang="en">envelope</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/getSRID -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/getSRID">
+        <rdfs:label xml:lang="en">getSRID</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/intersection -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/intersection">
+        <rdfs:label xml:lang="en">intersection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8dc -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8dc">
+        <rdfs:label xml:lang="en">disconnected</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8ec -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8ec">
+        <rdfs:label xml:lang="en">externally connected</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8eq -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8eq">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8ntpp -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8ntpp">
+        <rdfs:label xml:lang="en">non-tangential proper part</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8ntppi -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8ntppi">
+        <rdfs:label xml:lang="en">non-tangential proper part inverse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8po -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8po">
+        <rdfs:label xml:lang="en">partially overlapping</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8tpp -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8tpp">
+        <rdfs:label xml:lang="en">tangential proper part</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/rcc8tppi -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/rcc8tppi">
+        <rdfs:label xml:lang="en">tangential proper part inverse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/relate -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/relate">
+        <rdfs:label xml:lang="en">relate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfContains -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfContains">
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfCrosses -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfCrosses">
+        <rdfs:label xml:lang="en">crosses</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfDisjoint -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfDisjoint">
+        <rdfs:label xml:lang="en">disjoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfEquals -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfEquals">
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfIntersects -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfIntersects">
+        <rdfs:label xml:lang="en">intersects</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfOverlaps -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfOverlaps">
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfTouches -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfTouches">
+        <rdfs:label xml:lang="en">touches</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/sfWithin -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/sfWithin">
+        <rdfs:label xml:lang="en">within</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/symDifference -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/symDifference">
+        <rdfs:label xml:lang="en">symmetric difference</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengis.net/def/function/geosparql/union -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengis.net/def/function/geosparql/union">
+        <rdfs:label xml:lang="en">union</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/def/function/geosparql">
+        <ogc-na:collectionView rdf:resource="http://www.opengis.net/def/function/geosparql/"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Accuracy"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Detection_limit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Drift"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Frequency"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Latency"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Measurement__Range"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Precision"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Resolution"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Response_time"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Selectivity"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Sensitivity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#AcidityObservations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ConductivityObservations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#GranularityObservations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#HumidityObservations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#SaturationObservations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#SoilWaterPotentialObservations"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#AngleUnit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#AreaUnit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#DimensionlessUnit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#DistanceUnit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#PowerUnit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#RadianceUnit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#StressOrPressureUnit"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#TemperatureUnit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ArsenicCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#BariumCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#CalciumCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ChlorateCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ConductivityCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#CyanideCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#FluorideCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#IronCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Lead_Concentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#MagnesiumCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#NitrateCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#NitriteCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#PhospateCCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#TurbidityCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#WaterLevelCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#WaterTemperatureCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#pHLevelCompensate"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ArsenicConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#BariumConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#CalciumConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ChlorateConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#CyanideConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#FluorideConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#IronConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#LeadConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#MagnesiumConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#NitrateConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#NitriteConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#PhospateConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#SulphateConcentrate"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#AtmosphericPressureStates"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#HumidityStates"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#PrecipitationStates"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#TemperatureStates"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#WindSpeedStates"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#CarbonMonoxideCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#NitrogenDioxideCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#OzoneCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ParticularMassCompensate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#SulfurDioxideCompensate"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#CompensateMeasurnment"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Event"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#FeatureOfInterest"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Location"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Observations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ObservedProperty"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Organization"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Platform"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Resource"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Time"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Unit"/>
+            <rdf:Description rdf:about="http://purl.org/linked-data/api/vocab#ItemEndpoint"/>
+            <rdf:Description rdf:about="http://purl.org/linked-data/api/vocab#Page"/>
+            <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Collection"/>
+            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Drought"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Fire"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#LandSlide"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Storm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#FeatureOfInterest"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Location"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Observations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#ObservedProperty"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Organization"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Platform"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Resource"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Time"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#Unit"/>
+            <rdf:Description rdf:about="http://purl.org/linked-data/api/vocab#ItemEndpoint"/>
+            <rdf:Description rdf:about="http://purl.org/linked-data/api/vocab#Page"/>
+            <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+            <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Collection"/>
+            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#MonoxideConcentrate"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#WaterLevelObservations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#WaterTemperatureObservations"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#pHLevelConcentrate"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#TimeDuration"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#TimeInstant"/>
+            <rdf:Description rdf:about="http://localhost/enviornment.owl#TimeInterval"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
